@@ -19,7 +19,7 @@ function checkCandiNo() {
 }
 
 function validateForm(){
-	if(!checkSID()){
+	if(!checkSID()<10){
 	  alert("Invalid value for Student ID!");
 	  document.getElementById("sid").focus();
 	  return false;
