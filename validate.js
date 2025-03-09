@@ -1,7 +1,9 @@
 function checkSID() {
   let sid = (document.getElementById("sid").value).trim();
   if (sid.length == 10) {
-    return true;
+	if(sid=Number.isInteger()){
+      return true;
+  }
   } else {
     return false;
   }
@@ -21,7 +23,9 @@ function validateForm(){
 	  alert("Invalid value for Student ID!");
 	  document.getElementById("sid").focus();
 	  return false;
-	}else{
+
+	}
+	else{
 		if(!checkCandiNo()){
 		  alert("Invalid value for Candidate No!!");
 		  document.getElementById("candi").focus();
